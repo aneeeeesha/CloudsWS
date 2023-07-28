@@ -18,7 +18,7 @@ pipeline{
         }
         stage("Test"){
             steps{
-                sh 'curl -o /dev/null -s -w "%{http_code}\n" http://localhost:8000'
+                sh 'curl -o /dev/null -s -w "%{http_code}\n" http://localhost:3000/'
             }
     }
 }
