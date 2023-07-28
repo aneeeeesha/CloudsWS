@@ -9,7 +9,7 @@ pipeline{
         stage("Docker Build"){
             steps{
                 sh "docker build -t ${PROJECT_NAME}"
-            }
+            }}
         stage("Docker Run"){
             steps{
                 sh "(docker ps -a | grep ${PROJECT_NAME}) && (docker stop ${PROJECT_NAME}) && docker rm ${PROJECT_NAME}"
@@ -24,4 +24,3 @@ pipeline{
 }
 
     }
-}
